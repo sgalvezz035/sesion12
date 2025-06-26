@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Planetas Animados</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: hwb(220 24% 14% / 0.919);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 30px;
+    }
+
+    .container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1200px;
+    }
+
+    .card {
+      width: 220px;
+      height: 300px;
+      perspective: 1000px;
+    }
+
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+      cursor: pointer;
+      border-radius: 15px;
+    }
+
+    .card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      background-color: #022873;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .card-front img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid white;
+      margin-top: 20px;
+    }
+
+    .card-front h3 {
+      margin: 15px 0 10px;
+    }
+
+    .card-back {
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card-back h4 {
+      margin-bottom: 10px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Urano -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="RECURSOS/URANO1.jpg" alt="Urano">
+          <h3>Urano</h3>
+          <p>El gigante helado</p>
+        </div>
+        <div class="card-back">
+          <h4>Dato Curioso</h4>
+          <p>Gira de lado y tiene anillos tenues. Su color azul se debe al metano.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Neptuno -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="RECURSOS/NEPTUNO3.png" alt="Neptuno">
+          <h3>Neptuno</h3>
+          <p>El planeta más lejano</p>
+        </div>
+        <div class="card-back">
+          <h4>Dato Curioso</h4>
+          <p>Sus vientos son los más rápidos del sistema solar, superando los 2000 km/h.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plutón -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="RECURSOS/PLUTON.jpg" alt="Plutón">
+          <h3>Plutón</h3>
+          <p>Planeta enano</p>
+        </div>
+        <div class="card-back">
+          <h4>Dato Curioso</h4>
+          <p>Aunque fue un planeta, hoy es considerado un planeta enano del cinturón de Kuiper.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ceres -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="RECURSOS/CERES3.png" alt="Ceres">
+          <h3>Ceres</h3>
+          <p>El más grande del cinturón de asteroides</p>
+        </div>
+        <div class="card-back">
+          <h4>Dato Curioso</h4>
+          <p>Es un planeta enano entre Marte y Júpiter, con hielo bajo su superficie.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ío -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="RECURSOS/IO.jpg" alt="Ío">
+          <h3>Ío</h3>
+          <p>Una luna de Júpiter</p>
+        </div>
+        <div class="card-back">
+          <h4>Dato Curioso</h4>
+          <p>Es el cuerpo con mayor actividad volcánica del sistema solar.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Titán -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="RECURSOS/TITAN1.png" alt="Titán">
+          <h3>Titán</h3>
+          <p>La mayor luna de Saturno</p>
+        </div>
+        <div class="card-back">
+          <h4>Dato Curioso</h4>
+          <p>Tiene una atmósfera densa y lagos de metano líquido en su superficie.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
